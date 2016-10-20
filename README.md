@@ -15,4 +15,5 @@ Assign passwordless root only to the PID of that shell
  - tor support for reverse shell??
 
 # Changelog:
-V1.1 adds some small extras and a quick PoC of running bigphish on a teensy that will deploy the exploit in around 5 seconds on an unlocked mac
+- V1.1 adds some small extras and a quick PoC of running bigphish on a teensy that will deploy the exploit in around 5 seconds on an unlocked mac
+- V1.2 adds an exploit crafter for building process kill loops in OSX, even for processes owned by root or by other users along with an easy option to add custom commands from the interactive shell
