@@ -1,6 +1,7 @@
 
-//quick and dirty port using some of samy's code from USBdriverby as a framework for PoC
+//quick port using some of Samy's code from USBdriverby as a framework for PoC
 //tested working on teensy 3.1
+//looking to resolve keyboard setup prompt on inital connection to a new target machine
 void mod(int mod, int key)
 {
   Keyboard.set_modifier(mod);
