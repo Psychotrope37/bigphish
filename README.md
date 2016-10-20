@@ -9,3 +9,7 @@ Assign passwordless root only to the PID of that shell
 # TODO:
  - eliminate false positives of unsuccessful sudo attempts triggering the exploit prematurely
  - add more payloads
+ - tor support for reverse shell??
+
+# Changelog:
+V1.1 adds some small extras and a quick PoC of running bigphish on a teensy that will deploy the exploit in around 5 seconds on an unlocked mac
