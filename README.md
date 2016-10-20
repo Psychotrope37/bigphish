@@ -7,7 +7,7 @@ For whatever reason OSX hand out root privs to all PID any time sudo is run... T
 Running any software as root is effectively giving any and all software running on the system root priviledges. Which is bad. 
 
 # Solution:
-Assign passwordless root only to the PID of that shell
+Assign passwordless root only to instance of that shell
 
 # TODO:
  - eliminate false positives of unsuccessful sudo attempts triggering the exploit prematurely
