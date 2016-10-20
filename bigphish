@@ -1,6 +1,6 @@
 #!/bin/bash
 author=psychokiller
-bpver=1.1
+bpver=1.2
 #Props to Seb from hak5 - I`m bash n00b so some of the interface is based on Sebkinne's wp6.sh
 #Props to Seb from hak5 - I`m bash scripting n00b so some of the interface is based on Sebkinne's wp6.sh
 #Artwork - http://chris.com/ascii/index.php?art=animals/other%20%28water%29
