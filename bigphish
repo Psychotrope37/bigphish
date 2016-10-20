@@ -53,6 +53,7 @@ function manageshell {
    read port
    echo "   $(tput bold) [SHELL] $(tput sgr0)"
    nc -l $port
+   #add -p on linux
 }
 
 
