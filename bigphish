@@ -42,14 +42,12 @@ function menu {
 function configure {
     echo "Configure:"
     printf "    [$(tput bold)R$(tput sgr0)]everse Shell\n\
-    [$(tput bold)K$(tput sgr0)]eychain extraction\n\
     [$(tput bold)T$(tput sgr0)]ermination loop for windowserver for fun and profit\n\
     [$(tput bold)C$(tput sgr0)]ustom exploit\n\n    "
     read -r -sn1 key
     case "$key" in
             [rR]) reverseshell;;
             [tT]) killloop;;
-            [kK]) keychainextraction;;
             [cC]) customexploit;;
     esac
 }
