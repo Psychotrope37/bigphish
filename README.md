@@ -1,6 +1,7 @@
 # NOTICE:
-This issue appears to be resolved in the latest security updates for Mac OSX El Capitan and MacOS Sierra.  I am exploring other vectors to see if a form of this issue persists.
+This issue appears to have been resolved in MacOS Sierra by using tty_tickets.  Thats what I get for assuming that El Capitan with the latest security updates is adequate for testing exploits. For those wanting not wanting to upgrade to Sierra, set tty_tickets to ON for sudo. (http://blog.rongarret.info/2015/08/psa-beware-of-sudo-on-os-x.html)  I am exploring other vectors to see if a form of this issue persists, but I doubt anything will come of this outside of finding a critical error allowing writing to another tty.  
 
+I'm taking a break to practice my google-fu in light of these events...
 
 # Bigphish
 Easy to use exploit crafter for privilege escalation in OSX through systemwide root for all PID on sudo
