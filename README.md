@@ -1,3 +1,7 @@
+# NOTICE:
+This issue appears to be resolved in the latest security updates for Mac OSX El Capitan and MacOS Sierra.  I am exploring other vectors to see if a form of this issue persists.
+
+
 # Bigphish
 Easy to use exploit crafter for privilege escalation in OSX through systemwide root for all PID on sudo
 
