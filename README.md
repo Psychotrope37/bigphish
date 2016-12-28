@@ -1,5 +1,5 @@
 # NOTICE:
-This issue appears to have been resolved in MacOS Sierra by enabling tty_tickets by default. 
+This issue has been resolved by Appple in MacOS Sierra by enabling tty_tickets by default. 
 
 NOTE: All other MacOS operation system (El Capitan, Sierra, Mavericks etc...) still remain vulnerable to this exploit. 
 
