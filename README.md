@@ -3,8 +3,6 @@ This issue has been resolved by Apple in MacOS Sierra by enabling tty_tickets by
 
 NOTE: All other MacOS operation system (El Capitan, Yosemite, Mavericks etc...) still remain vulnerable to this exploit. 
 
-Effectively 99.9% of the install base for older Mac operatimng systems still receiving secuirty updates do not offer this secuirty measure by default.  For those wanting not wanting to upgrade to Sierra, set tty_tickets to ON for sudo. (http://blog.rongarret.info/2015/08/psa-beware-of-sudo-on-os-x.html)  I am exploring other vectors to see if a form of this issue persists, but I doubt anything will come of this outside of finding a critical error allowing talking as another tty.  
-
 # Bigphish
 Easy to use exploit crafter for privilege escalation in OSX through systemwide root for all PID on sudo
 
@@ -19,7 +17,7 @@ Assign passwordless root only to instance of that shell
 # TODO:
  - eliminate false positives of unsuccessful sudo attempts triggering the exploit prematurely
  - add more payloads
- - tor support for reverse shell??
+ - tor support for reverse shell?
 
 # Changelog:
 - V1.1 adds some small extras and a quick PoC of running bigphish on a teensy that will deploy the exploit in around 5 seconds on an unlocked mac
